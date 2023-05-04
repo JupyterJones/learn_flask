@@ -1,0 +1,8 @@
+mkdir -p static/js
+mkdir -p static/css
+mkdir -p static/images
+mkdir -p static/images/uploads
+mkdir -p static/images/square
+mkdir -p static/images/512x768
+mkdir -p static/video
+mkdir templates
