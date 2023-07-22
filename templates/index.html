@@ -1,0 +1,12 @@
+
+<form method="post" action="/video" enctype="multipart/form-data">
+    <label for="input_video">Select input video file:</label><br>
+    <input type="file" id="input_video" name="input_video"><br><br>
+    <input type="submit" value="Submit">
+</form>
+<a href="{{ url_for('add_effects') }}">process_video</a><br /><br />
+      
+      <video width="200" height="auto" controls>
+        <source src="static/assets/asset_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video><br />

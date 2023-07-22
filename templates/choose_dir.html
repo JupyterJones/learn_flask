@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Directory</title>
+</head>
+<body>
+    <h1>Choose a Directory</h1>
+    <form method="post" action="/choose_dir">
+        <label for="directory">Select a Directory:</label>
+        <select name="directory" id="directory">
+            {% for dir in directories %}
+                <option value="{{ dir }}">{{ dir }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit" value="Generate Video">
+    </form>
+    {% if output_path %}
+        <p>{{ output_path }}</p>
+        <p>Video generated successfully!</p>
+        <video width="512" height="auto" controls>
+            <source src="{{ output_path }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    {% endif %}
+
+    <video width="512" height="auto" controls>
+      <source src="static/videos/random_images_video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+  </video>
+</body>
+</html>
