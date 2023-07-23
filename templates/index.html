@@ -10,3 +10,12 @@
         <source src="static/assets/asset_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video><br />
+
+      <h1>Upload Image and Audio</h1>
+      <form action="/add_echo_and_image_to_video" method="post" enctype="multipart/form-data">
+        <label for="image">Select an image:</label><br>  
+        <input type="file" name="image" accept="image/*"  required><br><br>
+        <label for="audio">Select an audio file:</label><br>
+        <input type="file" name="audio" accept="audio/*"  required>
+          <button type="submit">Upload and Generate Video</button>
+      </form>

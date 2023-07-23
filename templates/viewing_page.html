@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processed Video</title>
+</head>
+<body>
+    <h1>Processed Video with Echo and Image</h1>
+    
+    <!-- Display the processed video with echo -->
+    <h2>Processed Video with Echo</h2>
+    <video controls>
+        <source src="{{ url_for('static', filename=video_file) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <br>
+
+    <!-- Display the input image used for the video -->
+    <h2>Input Image</h2>
+    <img src="{{ url_for('static', filename=image_file) }}" alt="Input Image">
+
+    <br>
+
+    <!-- Provide a link to download the original input video -->
+    <a href="{{ url_for('static', filename=video_file2) }}" download>Download Original Input Video</a>
+
+    <br>
+
+    <!-- Display the additional video -->
+    <h2>Additional Video - Use to generate Speaking Avatar</h2>
+    <video controls>
+        <source src="{{ url_for('static', filename=video_file2) }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

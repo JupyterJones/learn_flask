@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Page</title>
+</head>
+<body>
+    <h1>Upload an Image and an Audio File</h1>
+    <form method="post" action="/add_echo_and_image_to_video" enctype="multipart/form-data">
+        <label for="image">Select an image:</label><br>
+        <input type="file" id="image" name="image"><br><br>
+        <label for="audio">Select an audio file:</label><br>
+        <input type="file" id="audio" name="audio"><br><br>
+        <input type="submit" value="Upload and Process">
+    </form>
+</body>
+</html>
